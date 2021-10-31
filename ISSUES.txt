@@ -1,0 +1,11 @@
+1. Running rspec tests  
+    Reproduction: When trying to run a test with the "./spec/example/first_spec.rb" command,
+     an error is produced saying that permissions are denied. Then after all permissions are
+     changed on the file, a syntax error is thrown. saying the following:
+
+
+    ./spec/example/first_spec.rb: line 1: require: command not found
+    ./spec/example/first_spec.rb: line 3: RSpec.describe: command not found
+    ./spec/example/first_spec.rb: line 4: it: command not found
+    ./spec/example/first_spec.rb: line 5: syntax error near unexpected token `6'
+    ./spec/example/first_spec.rb: line 5: `    expect(6 * 7).to eq(42)'
