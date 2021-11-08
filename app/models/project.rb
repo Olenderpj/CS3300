@@ -1,4 +1,5 @@
 class Project < ApplicationRecord
     #validate the existence of both the title and descriptions
-    validate_presence_of :title, :description
+    validates_presence_of :title
+    validates_presence_of :description
 end
