@@ -10,7 +10,8 @@ jobs:
       - run:
           name: rspec
           command: bundle install && bundle exec rake db:migrate RAILS_ENV=test && bundle exec rspec
-# Invoke jobs via workflows
+
+          # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
   sample: # This is the name of the workflow, feel free to change it to better match your workflow.
