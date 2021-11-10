@@ -1,0 +1,16 @@
+This assignment was locked Oct 23 at 11:59pm.
+Purpose: How to approach learning MVC framework and implementing your portfolio projects in Rails.
+
+Effort:
+
+Group - Set up the environment and explore Part1 and Part1a. 
+Individual - Answer questions on your own.
+Points: 50
+
+Deliverables: Word document
+
+ 
+
+Assignment Description
+
+In this iteration you are going to set up Ruby on Rails in your docker image. Connect the set up of rails to the concepts you are learning about client server architecture and the MVC framework.  At the end of this iteration you are expected to have a Ruby on Rails application hosted on Heroku with a root route that will allow anyone to add / edit / and remove projects from your portfolio. Remember to update your project’s Kanban.

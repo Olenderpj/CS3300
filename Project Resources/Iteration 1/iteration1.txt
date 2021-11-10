@@ -1,0 +1,16 @@
+UPDATE: PLEASE COPY AND PASTE YOUR WORK IN GITHUB INTO A DOCUMENT AND UPLOAD. INCLUDE THE ORIGINAL REQUIREMENT ABOVE EACH USER STORY. This way feedback can be given.
+
+Time to start your portfolio project (Links to an external site.) (download project ppt  Download download project ppt)
+
+Purpose: Write requirements in a customer friendly language and include acceptance criteria to know when the user story will be completed. 
+
+Effort: Individual
+
+1. (30 pts) Develop 10 SMART user stories with acceptance criteria from the project requirements using the Connextra format. User stories must be in  your project’s Kanban. Each user story is worth 3 points. 
+
+1 for following the Connextra format 
+1 for making SMART user stories
+1 for acceptance criteria
+2. (5pts) Write at least 5 questions you would ask the client to help you better understand the requirements. Put the questions below the user story and acceptance criteria in GitHub.
+
+3. Submit the URL to your GitHub Portfolio Project that contains the user stories. For example the link should open your project user stories.

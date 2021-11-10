@@ -1,0 +1,17 @@
+Purpose: The purpose of this assignment is to start designing the user interface and the classes for the portfoio application.
+
+Effort: Individual
+
+Points: 20
+
+Deliverables: Word document
+
+Assignment Description
+
+In this homework assignment you are going to continue working on your individual software project. You will begin developing the user interface  of the iteration based on the user stories and requirements from the last iteration.
+
+
+Specifications
+
+Create UML class diagrams for the student class and the project class. Remember students need to be able to login before they can add, edit, and/or delete projects. Please show the associations between the project class and the student class. (10pts)
+Create 5 lo-fi mockups that show what the UI will look like. Each lo-fi diagram is worth 2 points.
