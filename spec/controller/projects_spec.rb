@@ -3,9 +3,11 @@ require "rails_helper"
 # Unit test for Controller portion of the Project MVC
 RSpec.describe ProjectsController, type: :controller do
 
+
+    user = FactoryBot.create(:user)
     # Test routing for index 
     context "GET #index" do
-        login_user
+        login_as(user, :scoper => :user)
 
         # Test that controller can route to index
         it "returns a success response" do
@@ -19,7 +21,7 @@ RSpec.describe ProjectsController, type: :controller do
 
     # Test routing for individual projects
     context "GET #show" do
-        login_user
+        login_as(user, :scoper => :user)
 
         # Create a test project
         let!(:project) { Project.create(title: "Test title", description: "Test description") }
