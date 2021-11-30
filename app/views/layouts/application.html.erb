@@ -9,13 +9,15 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <div class="welcome">
-    <% if user_signed_in? %>
-      <h2> Welcome, <%=current_user.email%> </h2>
-    <% else %>
-      <h2> Welcome! </h2>
-    <% end %>
+  <div class="container text-center"
+    <div class="welcome">
+      <% if user_signed_in? %>
+        <h2> Welcome, <%=current_user.email%> </h2>
+      <% else %>
+        <h2> Welcome! </h2>
+      <% end %>
 
+    </div>
   </div>
 
   <body>
