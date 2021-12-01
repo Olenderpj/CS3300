@@ -15,6 +15,6 @@
 
 
   <div class="container-fluid-nav text-center">
-    <button type="button" class="btn btn-outline-danger"> <a> <%= link_to 'Edit', edit_project_path(@project) %> </a> </button>
-    <button type="button" class="btn btn-outline-light">  <a> <%= link_to 'Back', projects_path %>               </a> </button>
+    <a> <%= link_to 'Home', projects_path, :class => 'btn btn-primary'%> </a>
+     <a> <%= link_to 'Edit', edit_project_path(@project), :class => 'btn btn-warning' %> </a> 
   </div>

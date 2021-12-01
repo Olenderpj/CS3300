@@ -9,47 +9,49 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #B26AF5;">
-      <a class="navbar-brand" href="#">Portfolio 
-        <div class="d-flex justify-content-center" style="color: #000; font-size: 25px; font-family: 'Courier New', monospace;">
-          <% if user_signed_in? %>
-            <a> Welcome, <%=current_user.email%> </a>
-          <% else %>
-            <a> Welcome! </a>
-          <% end %>
-        </div>
-      </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">  
+    <div class="nav-item active d-flex align-items-center">  
+      
+      <%= image_tag "Default-Profile.jpeg", height: 60 %>
+      
+      <% if user_signed_in? %>
+        <a style="font-size: 25px; font-family: 'Courier New', monospace; font-weight: 500;"> Welcome, <%=current_user.email%> </a>
+        
+      <% else %>
+        <a> Welcome! </a>
+      <% end %>
+    </div>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="text-center collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#"> <%=link_to"Home", root_path %></a>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav d-flex align-items-center" style="font-size: 23px">
+
+        <li class="nav-item active d-flex align-items-center">
+          <a class="nav-link " href="#"><%= link_to "Home", root_path %>  </a>
         </li>
+
+        <li class="nav-item active d-flex align-items-center">
+          <a class="nav-link " href="#"><%= link_to "Profile", edit_user_registration_path %>  </a>
+        </li>
+
+        <li class="nav-item active d-flex align-items-center">
+          <a class="nav-link " href="#"><a><% if not user_signed_in? %> <%= link_to "Login", new_user_session_path %>
+          <% else %> <%= link_to "Logout", destroy_user_session_path, method: :delete %> <% end %> </a>  </a>
+        </li>
+        
         <% if user_signed_in? %>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><%= link_to"Profile", edit_user_password_path %>  </a>
-        </li>
+          <li class="nav-item active d-flex align-items-center">
+            <a class="nav-link " href="#"><%= link_to "Register", new_user_registration_path%>  </a>
+          </li>
         <% end %>
-        <li class="nav-item">
-          <a class="nav-link" href="#"> <a><% if not user_signed_in? %> <%= link_to "Login", new_user_session_path %>
-                  <% else %> <%= link_to "Logout", destroy_user_session_path, method: :delete %> <% end %></a></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"> <a><% if not user_signed_in? %> <%= link_to "Register", new_user_registration_path %> <% end %></a></a>
-        </li>
-        <li class="nav-item dropdown">
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
       </ul>
     </div>
+  </div>
 </nav>
 
 

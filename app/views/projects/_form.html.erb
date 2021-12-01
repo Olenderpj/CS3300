@@ -12,16 +12,16 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <a style="font-family: 'Courier New', monospace;"> <%= form.label :title %> </a>
+    <%= form.text_field :title, :class => 'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
+    <a style="font-family: 'Courier New', monospace;"> <%= form.label :description %> </a>
+    <%= form.text_area :description, :class => 'form-control' %>
   </div>
 
-  <div class="container-fluid-nav text-center">
-     <%= form.submit %> 
+  <div class="container-fluid-nav text-center mt-4">
+     <%= form.submit :class => 'btn btn-danger' %>
   </div>
 <% end %>
