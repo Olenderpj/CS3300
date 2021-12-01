@@ -1,6 +1,10 @@
-<h1>Editing Project</h1>
 
-<%= render 'form', project: @project %>
+<div class="container-fluid-nav text-center">
+    <h1>Editing Project</h1>
+    <%= render 'form', project: @project %>
+</div>
 
-<%= link_to 'Show', @project %> |
-<%= link_to 'Back', projects_path %>
+<div class="container-fluid-nav text-center">
+    <button type="button" class="btn btn-outline-success"><%= link_to 'View Project', @project %></button> 
+    <%= link_to 'Back', projects_path %>
+</div>

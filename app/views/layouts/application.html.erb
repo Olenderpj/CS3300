@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CS3300</title>
+    <title>CS3300 Portfolio</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,27 +9,53 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <div class="container text-center"
-    <div class="welcome">
-      <% if user_signed_in? %>
-        <h2> Welcome, <%=current_user.email%> </h2>
-      <% else %>
-        <h2> Welcome! </h2>
-      <% end %>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #B26AF5;">
+      <a class="navbar-brand" href="#">Portfolio 
+        <div class="d-flex justify-content-center" style="color: #000; font-size: 25px; font-family: 'Courier New', monospace;">
+          <% if user_signed_in? %>
+            <a> Welcome, <%=current_user.email%> </a>
+          <% else %>
+            <a> Welcome! </a>
+          <% end %>
+        </div>
+      </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
+    <div class="text-center collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#"> <%=link_to"Home", root_path %></a>
+        </li>
+        <% if user_signed_in? %>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><%= link_to"Profile", edit_user_password_path %>  </a>
+        </li>
+        <% end %>
+        <li class="nav-item">
+          <a class="nav-link" href="#"> <a><% if not user_signed_in? %> <%= link_to "Login", new_user_session_path %>
+                  <% else %> <%= link_to "Logout", destroy_user_session_path, method: :delete %> <% end %></a></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"> <a><% if not user_signed_in? %> <%= link_to "Register", new_user_registration_path %> <% end %></a></a>
+        </li>
+        <li class="nav-item dropdown">
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+      </ul>
     </div>
-  </div>
+</nav>
 
-  <body>
-    <%= yield %>
-  </body>
 
-  <div class="options">
-    <% if user_signed_in? %>
-      <button><%= link_to "logout", destroy_user_session_path, method: :delete %></button>
-    <% else %>
-      <button><%= link_to "login", new_user_session_path %></button>
-      <button><%= link_to "register", new_user_registration_path %></button>
-    <% end %>
+  <div class="container center"
+    <body>
+      <%= yield %>
+    </body>
   </div>
 </html>
