@@ -15,9 +15,14 @@
       
       <%= image_tag "Default-Profile.jpeg", height: 60 %>
       
-      <% if user_signed_in? %>
+      
+      
+      <% if user_signed_in? and current_user.email == "none@nomail.com" %>
+        <a style="font-size: 25px; font-family: 'Courier New', monospace; font-weight: 500;"> Welcome, PJ Olender! </a>
+      
+      <% elsif user_signed_in? and current_user.email != "none@nomail.com" %>
         <a style="font-size: 25px; font-family: 'Courier New', monospace; font-weight: 500;"> Welcome, <%=current_user.email%> </a>
-        
+      
       <% else %>
         <a> Welcome! </a>
       <% end %>
