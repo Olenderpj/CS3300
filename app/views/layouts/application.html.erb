@@ -44,9 +44,9 @@
           <% else %> <%= link_to "Logout", destroy_user_session_path, method: :delete %> <% end %> </a>  </a>
         </li>
         
-        <% if user_signed_in? %>
+        <% if not user_signed_in? %>
           <li class="nav-item active d-flex align-items-center">
-            <a class="nav-link " href="#"><%= link_to "Register", new_user_registration_path%>  </a>
+            <a class="nav-link " href="#"><%= link_to "Register", new_user_registration_path %>  </a>
           </li>
         <% end %>
       </ul>

@@ -2,7 +2,7 @@
 <div class="container-fluid-nav text-center">
 
   <%- if controller_name != 'sessions' %>
-    <button type="button" class="btn btn-success"><%= link_to "Log in", new_session_path(resource_name) %></button>
+    <%= link_to "Log in", new_session_path(resource_name), :class => 'btn btn-outline-primary' %>
     <br />
   <% end %>
 
