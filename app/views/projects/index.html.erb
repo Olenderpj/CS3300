@@ -1,71 +1,59 @@
+<div class="container-fluid-nav text-center">
+  <p style="color: green; font-size: 20px" id="notice"><%= notice %></p>
+</div>
+
 
 <div class="row pt-4 pb-4">
   
 <div class="card col-sm-6 ">
-    <div class="d-flex  justify-content-center mt-4"> <%= image_tag "ProfilePhoto.jpeg", height: 350, width: 350 %>
-    </div>
+  <div class="d-flex  justify-content-center mt-4"> <%= image_tag "ProfilePhoto.jpeg", height: 350, width: 350 %>
   </div>
+</div>
   
-  <div class="card col-sm-6">
-    <table> 
+<div class="card col-sm-6">
+  <table> 
     <tr> <h2 class="d-flex justify-content-center"> PJ Olender </h2> </tr>
     <tr> <p class="text-center"> A Junior at the University of Colorado in Colorado Springs Studying Computer Science </p> </tr>
     <tr> <p class="text-center"> Interests include, Cloud Technologies, Cloud Computing, Artificial Intelligence, Neural Networks </p>
     <tr> <p class="text-center"> ** Currently Seeking Entry Level Software Development positions ** </p> </tr>
-    
-    </table>
+  </table>
 
-    <div class="d-flex flex-column mt-auto mb-3">
-      <%= link_to "Go to my LinkedIn", "https://www.linkedin.com/in/patrick-olender/", :class => 'btn btn-primary' %>
-    </div>
+  <div class="d-flex flex-column mt-auto mb-3">
+    <%= link_to "Go to my LinkedIn", "https://www.linkedin.com/in/patrick-olender/", :class => 'btn btn-primary' %>
+  </div>
 
-    <div class="d-flex flex-column mt-auto mb-3">
-      <%= link_to "Go to my Github", "https://github.com/Olenderpj", :class => 'btn btn-primary' %>
-    </div>
+  <div class="d-flex flex-column mt-auto mb-3">
+    <%= link_to "Go to my Github", "https://github.com/Olenderpj", :class => 'btn btn-primary' %>
+  </div>
   </div>
 </div>
 
 
-
-
-<div class="container-fluid-nav text-center">
+<div class="container mt-auto mb-auto ">
+  <div class="title d-flex flex-column text-center">
+    <h1 style="font-family: 'Courier New', monospace;">My Personal Projects</h1>
+  </div>
   
-  <p style="color: green; font-size: 20px" id="notice"><%= notice %></p>
-
-  <div class="title">
-      <h1 style="font-family: 'Courier New', monospace;">My Personal Projects</h1>
-    </div>
-</div>
-
-
-
-<div class="container">
   <table class="table">
     <thead>
-      <tr>
-        
         <% @projects.each do |project| %>
-          
-          <div class="card" >
-            <div class="card-body" >
-              <h5 class="card-title d-flex justify-content-center"> <%= project.title %> </h5>
-              <p class="card-text d-flex justify-content-center"> <%= project.description %> </p>    
-          </div>
-          
-          <div class="d-flex justify-content-center" >
-              <%= link_to 'Show', project , :class => 'btn btn-outline-primary'%>
-              <div class="ml-3 mr-3"><%= link_to 'Edit', edit_project_path(project), :class => 'btn btn-outline-warning' %></div>
-              <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-outline-danger' %>
-              
-          </div>
+          <tr>
+            <div class="card mt-3">
+              <h5 class="card-title d-flex justify-content-center mt-3"> <%= project.title %> </h5>
+              <p class="card-text d-flex text-center ml-3 mr-3"> <%= project.description %> </p>
+              <div class="d-flex justify-content-center mb-2" >
+                <%= link_to 'Show', project , :class => 'btn btn-outline-primary'%>
+                  <div class="ml-3 mr-3"><%= link_to 'Edit', edit_project_path(project), :class => 'btn btn-outline-warning' %>
+                  </div>
+                <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-outline-danger' %>
+              </div>
+            </div>
+          </tr>
         <% end %>
-      </tr>
     </thead>
   </table>
+    <div class="container-fluid-nav text-center">
+      <button type="button" class="btn btn-outline-primary btn-lg" > <%= link_to 'New Project', new_project_path %> </button>
+    </div>  
 </div>
-
 <br>
-
-<div class="container-fluid-nav text-center">
-  <button type="button" class="btn btn-outline-primary btn-lg" > <%= link_to 'New Project', new_project_path %> </button>
-</div>  
